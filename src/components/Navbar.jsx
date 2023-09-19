@@ -5,8 +5,12 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const close = () => {
+  const toggleMenu = () => {
     setOpen(!open);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
   };
 
   return (
@@ -19,62 +23,62 @@ const Navbar = () => {
           <div className={`max-[1300px]:hidden`}>
             <ul className="flex list-none no-underline gap-5">
               <li className="ml-7 p-3">
-                <Link to="/" className="text-white">
+                <Link to="/" className="text-white" onClick={closeMenu}>
                   Home
                 </Link>
               </li>
               <li className="ml-7 p-3">
-                <Link to="/about" className="text-white">
+                <Link to="/about" className="text-white" onClick={closeMenu}>
                   About Me
                 </Link>
               </li>
               <li className="ml-7 p-3">
-                <Link to="/projects" className="text-white">
+                <Link to="/projects" className="text-white" onClick={closeMenu}>
                   Projects
                 </Link>
               </li>
               <li className="ml-7 p-3">
-                <Link to="/experience" className="text-white">
+                <Link to="/experience" className="text-white" onClick={closeMenu}>
                   Experience
                 </Link>
               </li>
               <li className="ml-7 p-3">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-sm text-white">
+                <Link to="/contact" className="text-white" onClick={closeMenu}>
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          <div onClick={close} className="pr-4 z-10 cursor-pointer md:hidden">
+          <div onClick={toggleMenu} className="pr-4 z-10 cursor-pointer md:hidden">
             {open ? <FaTimes size={30} /> : <FaBars size={30} />}
           </div>
         </div>
 
         {open && (
-          <ul className="flex flex-col justify-center items-center absolute top-0 right-0  bg-gradient-to-b from-black to-gray-800 text-gray-500">
+          <ul className="flex flex-col justify-center items-center absolute top-0 right-0 bg-gradient-to-b from-black to-gray-800 text-gray-500">
             <li className="ml-7 p-3">
-              <Link to="/" className="text-white">
+              <Link to="/" className="text-white" onClick={closeMenu}>
                 Home
               </Link>
             </li>
             <li className="ml-7 p-3">
-              <Link to="/about" className="text-white">
+              <Link to="/about" className="text-white" onClick={closeMenu}>
                 About Me
               </Link>
             </li>
             <li className="ml-7 p-3">
-              <Link to="/projects" className="text-white">
+              <Link to="/projects" className="text-white" onClick={closeMenu}>
                 Projects
               </Link>
             </li>
             <li className="ml-7 p-3">
-              <Link to="/experience" className="text-white">
+              <Link to="/experience" className="text-white" onClick={closeMenu}>
                 Experience
               </Link>
             </li>
             <li className="ml-7 p-3">
-              <Link to="/contact" className="bg-slate-400 rounded-sm text-white">
+              <Link to="/contact" className="text-white" onClick={closeMenu}>
                 Contact
               </Link>
             </li>

@@ -12,6 +12,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
+import Experience from './components/Experience';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
     <Route exact path='/about' element={<About />}></Route>
     <Route exact path='/projects' element={<Project />}></Route>
     <Route exact path='/contact' element={<Contact />}></Route>
+    <Route exact path='/experience' element={<Experience />}></Route>
     </Routes>
   </div>
   </Router>

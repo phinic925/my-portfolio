@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import {FiArrowRight} from 'react-icons/fi'
 const Home = () => {
   return (
@@ -10,11 +11,13 @@ const Home = () => {
             technologies like react, javascript, Tailwind, ruby and ruby on rails.
           </p>
           <div className='text-white w-fit px-6 py-3'>
-            <button className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>projects
+            <a href='/cv1.pdf' download='true' target='_blank' rel='noreferrer'>
+            <button className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>Download resume
               <span className='group-hover:rotate-90 duration-300'>
                 <FiArrowRight size={25}/>
               </span>
             </button>
+            </a>
           </div>
          </div>
          <div>
